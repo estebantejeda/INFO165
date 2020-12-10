@@ -1,0 +1,43 @@
+package codigo;
+
+import java_cup.runtime.Symbol;
+
+parser code
+{:
+    private Symbol s;
+    
+    public void syntax_error(Symbol s){
+        this.s = s;
+    }
+
+    public Symbol getS(){
+        return this.s;
+}
+:};
+
+/* Terminales */
+terminal INICIAR, PARTIR, METER, SACAR, MIRAR, DATO, FINALIZAR;
+         PAR_A, PAR_C, COMA, ID, NUM, POS;
+
+/* Variables */
+non terminal PAR, INST, INI, MET, SAC, MIR, DAT;
+
+/* Simbolo partida */
+start with PAR;
+
+/********** GRAMATICA **********/
+/* PAR <- PARTIR INST FINALIZAR*/
+  INST <- INST INST | INI | MET| SAC | MIR | DAT;
+   INI <- INICIAR(ID,NUM,NUM,NUM,NUM,NUM,NUM,NUM,NUM)
+   MET <- METER(ID,NUM,POS) 
+   SAC <- SACAR(ID,POS)
+   MIR <- MIRAR(ID)
+   DAT <- DATO(ID,POS)*/
+
+PAR      ::=   PARTIR INST FINALIZAR;
+INST     ::=   INST INST | INI | MET| SAC | MIR | DAT;
+INI      ::=   INICIAR PAR_A ID COMA NUM COMA NUM COMA NUM COMA NUM COMA NUM COMA NUM COMA NUM COMA NUM PAR_C;
+MET      ::=   METER PAR_A ID COMA NUM COMA POS PAR_C;
+SAC      ::=   SACAR PAR_A ID COMA POS PAR_C;
+MIR      ::=   MIRAR PAR_A ID PAR_C;
+DAT      ::=   DATO PAR_A ID COMA POS PAR_C;

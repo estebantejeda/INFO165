@@ -7,12 +7,21 @@ package codigo;
 
 /**
  *
- * @author HP
+ * @author Charly Ponce
  */
-public enum Tokens {   
-    Reservada,
-    Identificador,
-    Constante_Entera,
-    Simbolo,
+public enum Tokens {
+    PARTIR,
+    INICIAR,
+    METER,
+    SACAR,
+    MIRAR,
+    DATO,
+    FINALIZAR,
+    PAR_A,
+    PAR_C,
+    COMA,
+    ID,
+    NUM,
+    POS,
     ERROR
 }

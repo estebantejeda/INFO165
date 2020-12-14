@@ -10,43 +10,53 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Scanner;
+import java.util.*;
 
 /**
  *
- * @author Charly Ponce
+ * @author HP
  */
+
 public class Principal {
     public static void main(String[] args) throws Exception {
-        String folderPath = System.getProperty(("user.dir"));
-    	
-        String r1 = folderPath.concat("/src/codigo/Lexer.flex");
-        String r2 = folderPath.concat("/src/codigo/LexerCup.flex");
-        String r3 = folderPath.concat("/src/codigo/Sintax.cup");
         
-        String[] rS = {"-parser", "Sintax", r3};
-        
-        generar(r1, r2, rS);
+        String ruta1 = "C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/Lexer.flex"; 
+        //String ruta1 = ".../src/codigo/Lexer.flex"; 
+        String ruta2 =  "C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/LexerCup.flex"; 
+        String[] rutaS = {"-parser", "Sintax", "C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/Sintax.cup"}; 
+        generar(ruta1, ruta2, rutaS);   
+
     }
+   
+
     
-    public static void generar(String r1, String r2, String[] rS) throws IOException, Exception{
-    	String folderPath = System.getProperty(("user.dir"));    	
-    	File archivo = new File(r1);
+    public static void generar(String ruta1,String ruta2, String[] rutaS ) throws IOException, Exception{
+        File archivo;
+        archivo = new File(ruta1);
         JFlex.Main.generate(archivo);
-        File archivo2 = new File(r2);
-        JFlex.Main.generate(archivo2);
-        java_cup.Main.main(rS);
+        archivo = new File(ruta2);
+        JFlex.Main.generate(archivo);
+        java_cup.Main.main(rutaS);
         
-        Path rSym = Paths.get(folderPath.concat("/src/codigo/sym.java"));
-        if (Files.exists(rSym)) Files.delete(rSym);
+        
+        Path rutaSym = Paths.get("C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/sym.java");
+        if (Files.exists(rutaSym)) {
+            Files.delete(rutaSym);
+        }
         Files.move(
-                Paths.get(folderPath.concat("/sym.java")), 
-                Paths.get(folderPath.concat("/src/codigo/sym.java"))
+            Paths.get("C:/Users/HP/Documents/NetBeansProjects/TAREA/sym.java"),
+            Paths.get("C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/sym.java")
         );
-        Path rSin = Paths.get(folderPath.concat("/src/codigo/Sintax.java"));
-        if (Files.exists(rSin)) Files.delete(rSin);
+        Path rutaSin = Paths.get("C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/Sintax.java");
+        if (Files.exists(rutaSin)) {
+            Files.delete(rutaSin);
+        }
         Files.move(
-        		Paths.get(folderPath.concat("/Sintax.java")),
-                Paths.get(folderPath.concat("/src/codigo/Sintax.java"))
+                Paths.get("C:/Users/HP/Documents/NetBeansProjects/TAREA/Sintax.java"), 
+                Paths.get("C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/Sintax.java")
         );
     }
 }
+
+

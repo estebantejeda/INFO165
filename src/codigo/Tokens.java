@@ -7,9 +7,9 @@ package codigo;
 
 /**
  *
- * @author Charly Ponce
+ * @author HP
  */
-public enum Tokens {
+public enum Tokens {   
     PARTIR,
     INICIAR,
     METER,
@@ -17,11 +17,10 @@ public enum Tokens {
     MIRAR,
     DATO,
     FINALIZAR,
-    PAR_A,
-    PAR_C,
+    Pa,
+    Pc,
     COMA,
     ID,
     NUM,
-    POS,
     ERROR
 }

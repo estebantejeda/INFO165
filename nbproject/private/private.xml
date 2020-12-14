@@ -3,11 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/AnalizadorLexico/src/codigo/Principal.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/AnalizadorLexico/src/codigo/Lexer.flex</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/AnalizadorLexico/src/codigo/Lexer.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/AnalizadorLexico/src/codigo/Tokens.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/AnalizadorLexico/src/codigo/FrmPrincipal.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/Sintax.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/Array.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/FrmPrincipal.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/Principal.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/Lexer.flex</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/LexerCup.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/sym.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/Sintax.cup</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/Tokens.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/TAREA/src/codigo/LexerCup.flex</file>
         </group>
     </open-files>
 </project-private>
